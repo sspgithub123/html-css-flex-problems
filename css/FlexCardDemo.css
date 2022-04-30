@@ -1,0 +1,60 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    background-color: silver;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card {
+    width: 200px;
+    min-height: 100px;
+    /*Setting min-height 100px and can adjust automatically*/
+    margin: 10px;
+    border: 5px solid gold;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px red;
+    /* The box-shadow CSS property adds shadow effects around an element's frame.*/
+}
+
+.card img {
+    max-width: 100%;
+    max-height: fit-content;
+}
+
+.card .text {
+    /*Way to define for subclass eg. .card .text*/
+    padding: 0 20px 20px;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.card .text>h3 {
+    /*Way to define for subclass and then a particular tag eg. .card .text*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.card .text>button {
+    background: deeppink;
+    border: solid 2px grey;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+/*Selecting some special property for particular box*/
+
+.card:nth-child(1) {
+    width: 420px;
+}
+
+.card:nth-child(4) {
+    width: 420px;
+}
